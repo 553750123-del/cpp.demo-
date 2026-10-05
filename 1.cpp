@@ -60,7 +60,7 @@ void PrintSqList(SqList *L) {
     printf("\n");
 }
 ​
-//================单链表函数实现================
+
 void InitLinkList(LinkList *L) {
     *L = (LNode*)malloc(sizeof(LNode));
     if (*L == NULL) {
@@ -114,7 +114,7 @@ void PrintLinkList(LinkList L) {
     printf("\n");
 }
 ​
-//链表冒泡升序排序，修复VS未初始化警告
+
 void SortLinkList(LinkList C)
 {
     if (C == NULL || C->next == NULL || C->next->next == NULL)
@@ -135,7 +135,7 @@ void SortLinkList(LinkList C)
     }
 }
 ​
-//合并：D顺序表所有元素 + B链表所有元素，存入C并整体升序
+
 LinkList MergeSqAndLink(SqList *D, LinkList B) {
     LinkList C;
     InitLinkList(&C);
@@ -196,7 +196,6 @@ void DelRepeat(LinkList C) {
     }
 }
 ​
-//递归辅助函数，用于逆序打印
 void PrintDescSub(LNode* p, int *first);
 ​
 void PrintDesc(LinkList C) {
@@ -229,7 +228,6 @@ void DestroyLinkList(LinkList *L) {
     *L = NULL;
 }
 ​
-//==================== main函数（修复参数缺失bug） ====================
 int main()
 {
     SqList A, D;
